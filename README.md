@@ -1,128 +1,103 @@
-✈️ Uçak Bilet Rezervasyon Sistemi
+# ✈️ Uçak Bilet Rezervasyon Sistemi( Final Ödevi BIP1026)
+
 Bu proje, Java programlama dili kullanılarak geliştirilmiş basit bir uçak bilet rezervasyon sistemidir. Sistem, kullanıcıların uçuşları görüntülemesine ve bilet rezervasyonu yapmasına olanak sağlar.
 
-🚀 Özellikler
-Uçuş listesi görüntüleme
+## 🚀 Özellikler
 
-Yeni rezervasyon yapma
+- Uçuş listesi görüntüleme  
+- Yeni rezervasyon yapma  
+- Rezervasyon geçmişi görüntüleme  
+- Koltuk doluluk oranı takibi  
+- İç ve dış hat uçuşları desteği  
+- Basit ve anlaşılır konsol arayüzü  
 
-Rezervasyon geçmişi görüntüleme
+## 🛠️ Sistem Gereksinimleri
 
-Koltuk doluluk oranı takibi
+- Java Development Kit (JDK) 8 veya üzeri  
+- Herhangi bir işletim sistemi (Windows, macOS, Linux)  
 
-İç ve dış hat uçuşları desteği
+## ⚙️ Kurulum
 
-Kullanıcı dostu grafiksel arayüz
-codewithcurious.com
+1. Projeyi bilgisayarınıza indirin veya klonlayın:
+   ```bash
+   git clone https://github.com/kizilsamuray/ucak-rezervasyon.git
+   cd ucak-rezervasyon
+2-data klasörünü oluşturun:
 
-🛠️ Sistem Gereksinimleri
-Java Development Kit (JDK) 8 veya üzeri
-
-Herhangi bir işletim sistemi (Windows, macOS, Linux)
-
-⚙️ Kurulum
-Projeyi bilgisayarınıza indirin veya klonlayın:
-
-bash
-Kopyala
-Düzenle
-git clone https://github.com/kizilsamuray/ucak-rezervasyon.git
-cd ucak-rezervasyon
-data klasörünü oluşturun:
-
-bash
-Kopyala
-Düzenle
 mkdir data
-Java dosyalarını derleyin:
 
-bash
-Kopyala
-Düzenle
+3-Java dosyalarını derleyin:
+
 javac src/*.java src/entity/*.java
-Programı çalıştırın:
-GitHub
-+4
-arXiv
-+4
-arXiv
-+4
 
-bash
-Kopyala
-Düzenle
+4-Programı çalıştırın:
+
 java -cp src Main
+
 🎮 Kullanım
-Program başlatıldığında üç sekme içeren bir arayüz açılır:
+Program çalıştığında kullanıcıya konsol üzerinden aşağıdaki seçenekler sunulur:
 
-Uçuşlar Sekmesi
+Uçuşları Listele
 
-Mevcut tüm uçuşları listeler
+Tüm mevcut uçuşları listeler.
 
-Uçuş detaylarını (kalkış, varış, zaman, fiyat vb.) gösterir
+Kalkış/varış noktaları, saat, uçak tipi gibi bilgiler görüntülenir.
 
-Koltuk doluluk oranlarını takip eder
+Yeni Rezervasyon Yap
 
-Rezervasyon Yap Sekmesi
+Uygun bir uçuş seçilir.
 
-Uçuş seçimi
+Kullanıcıdan ad, soyad, yaş bilgileri alınır.
 
-Yolcu bilgileri girişi (ad, soyad, yaş)
+Koltuk kapasitesi kontrol edilir, uygunluk varsa rezervasyon yapılır.
 
-Rezervasyon onayı
+Rezervasyonları Listele
 
-Rezervasyonlar Sekmesi
+Mevcut rezervasyonları listeler.
 
-Tüm rezervasyonları listeler
+Uçuş bilgileri ve yolcu bilgileri görüntülenir.
 
-Rezervasyon durumlarını gösterir
+Çıkış
 
-Rezervasyon detaylarını görüntüler
+Uygulamadan çıkılır.
 
 ✈️ Uçuş Bilgileri
 Sistem şu anda aşağıdaki uçuşları içermektedir:
 
 İç Hat Uçuşları
-İstanbul-Ankara (TK1001)
+İstanbul - Ankara (TK1001)
 
-Ankara-İzmir (TK1002)
+Ankara - İzmir (TK1002)
 
-İzmir-İstanbul (TK1003)
+İzmir - İstanbul (TK1003)
 
-İstanbul-Antalya (TK1004)
+İstanbul - Antalya (TK1004)
 
-Antalya-Ankara (TK1005)
+Antalya - Ankara (TK1005)
 
 Dış Hat Uçuşları
-İstanbul-Londra (TK2001)
+İstanbul - Londra (TK2001)
 
-İstanbul-Paris (TK2002)
+İstanbul - Paris (TK2002)
 
-İstanbul-Roma (TK2003)
+İstanbul - Roma (TK2003)
 
-İstanbul-Dubai (TK2004)
+İstanbul - Dubai (TK2004)
 
-Dubai-Londra (TK2005)
+Dubai - Londra (TK2005)
 
 🛩️ Uçak Filosu
-Boeing 737 (150 koltuk)
-
-Airbus A320 (180 koltuk)
-
-Boeing 777 (300 koltuk)
-
-Airbus A350 (250 koltuk)
+Uçak Modeli	Marka	Koltuk Kapasitesi
+Boeing 737	Boeing	150
+Airbus A320	Airbus	180
+Boeing 777	Boeing	300
+Airbus A350	Airbus	250
 
 💾 Veri Saklama
-Sistem, uçuş ve rezervasyon bilgilerini data klasörü altında metin dosyalarında saklar:
+Sistem verileri aşağıdaki dosyalarda saklar:
 
-data/ucuslar.txt: Uçuş bilgileri
+data/ucuslar.txt → Uçuş bilgileri
 
-data/rezervasyonlar.txt: Rezervasyon bilgileri
+data/rezervasyonlar.txt → Rezervasyon bilgileri
 
-👨‍💻 Geliştirici
-Bu proje, Java programlama dili öğrenme sürecinde geliştirilmiştir. Projeyi geliştirmek veya katkıda bulunmak isterseniz, lütfen bir issue açın veya pull request gönderin.
-
-GitHub: github.com/kizilsamuray
-
-E-posta: Akersemi07@gmail.com
+Alternatif olarak .csv, .json veya .xml formatlarına dönüştürülebilir (isteğe bağlı).
